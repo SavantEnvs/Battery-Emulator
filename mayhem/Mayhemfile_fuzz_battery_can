@@ -1,0 +1,9 @@
+project: savantenvs/Battery-Emulator
+target: fuzz_battery_can
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_battery_can/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_battery_can
+    libfuzzer: true
+    timeout: 10
